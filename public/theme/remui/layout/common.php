@@ -112,7 +112,7 @@ $primarymenu = $primary->export_for_template($renderer);
 
 // Recent Courses Menu.
 if (isloggedin()) {
-    $primarymenu = \theme_remui\utility::get_recent_courses_menu($primarymenu);
+    //$primarymenu = \theme_remui\utility::get_recent_courses_menu($primarymenu);
 }
 
 // Course Categories Menu.
