@@ -419,12 +419,88 @@ if ($ADMIN->fulltree) {
         'hide' => ['loaderimage'],
     ]];
 
+    // Base Website URL.
+    $name = 'theme_remui/policybaseurl';
+    $title = get_string('policybaseurl', 'theme_remui');
+    $description = get_string('policybaseurldesc', 'theme_remui');
+    $default = 'https://stagewp1.ucareer.org.au/';
+
+    $setting = new admin_setting_configtext(
+        $name,
+        $title,
+        $description,
+        $default,
+        PARAM_URL
+    );
+
+    $page->add($setting);
+
     // Dark mode setting heading.
     $page->add(new admin_setting_heading(
         'theme_remui_darkmodesettings',
         new lang_string('darkmodesettingshead', 'theme_remui'),
         format_text(new lang_string('darkmodesettingsheaddesc', 'theme_remui'), FORMAT_MARKDOWN)
     ));
+
+    //Links 
+    // Footer Links Settings.
+$page->add(new admin_setting_heading(
+    'theme_remui_footerlinks',
+    'Footer Links',
+    'Configure the footer links.'
+));
+
+$footerlinks = [
+    1 => [
+        'title' => 'Quality, Education and Course Provider Accreditation',
+        'url'   => 'http://www.asqa.edu.au/'
+    ],
+    2 => [
+        'title' => 'Course Resources',
+        'url'   => 'https://training.gov.au/'
+    ],
+    3 => [
+        'title' => 'Australian Taxation Office (ATO)',
+        'url'   => 'https://www.ato.gov.au/'
+    ],
+    4 => [
+        'title' => 'Department of Employment and Workplace Relations',
+        'url'   => 'https://www.dewr.gov.au/'
+    ],
+    5 => [
+        'title' => 'Department of Industry, Innovation, Climate Change, Science, Research and Tertiary Education',
+        'url'   => 'https://www.industry.gov.au/'
+    ],
+    6 => [
+        'title' => 'Queensland Government',
+        'url'   => 'https://www.qld.gov.au/'
+    ],
+    7 => [
+        'title' => 'Wageline',
+        'url'   => 'https://www.wageline.qld.gov.au/'
+    ],
+    8 => [
+        'title' => 'State Library of Queensland',
+        'url'   => 'https://www.slq.qld.gov.au/'
+    ]
+];
+
+foreach ($footerlinks as $index => $link) {
+
+    $name = "theme_remui/footerlink{$index}url";
+    $title = $link['title'];
+    $description = 'Footer link URL';
+
+    $setting = new admin_setting_configtext(
+        $name,
+        $title,
+        $description,
+        $link['url'],
+        PARAM_URL
+    );
+
+    $page->add($setting);
+}
 
     $name = 'theme_remui/enabledarkmode';
     $title = new lang_string('enabledarkmode', 'theme_remui');

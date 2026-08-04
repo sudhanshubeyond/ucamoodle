@@ -1505,3 +1505,5 @@ $string['yettostart'] = 'Yet to Start';
 $string['yoursiteisready'] = ' Your site is ready.';
 $string['youtubesetting'] = 'YouTube';
 $string['youtubesettingdesc'] = 'Enter your site\'s YouTube page link. For eg. https://www.youtube.com/channel/UCU1u6QtAAPJrV0v0_c2EISA';
+$string['policybaseurl'] = 'Policy Base URL';
+$string['policybaseurldesc'] = 'Base URL for policy links.';

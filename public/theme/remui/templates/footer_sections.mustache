@@ -18,43 +18,185 @@
 
 }}
 {{!
-    @template theme_remui/footer_sections
+    UCA Custom Footer - Main Section
 }}
 
-<div class="footerdata section-footer-design-1">
-    {{#sections}}
-    <div id="footer-column-{{coulumnid}}" class="footer-section-wrapper {{#classes}}{{classes}}{{/classes}} {{#isempty}}d-none{{/isempty}}" style="">
-        <div class="footer-menu menu-{{orientation}} {{#customhtml}}d-none{{/customhtml}}">
-            <h6 class="h-semibold-6 mb-0 ftr-column-title" >{{{ title }}}</h6>
-            <hr class="d-sm-block d-md-none my-0 ">
-            <div class="footer-menu-list">
-                {{#menu}}
-                <h6 class="h-regular-6 mb-0"><a target="_blank" href="{{address}}" >{{text}}</a></h6>
-                {{/menu}}
-            </div>
+<div class="uca-footer-main">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="uca-footer-logo text-center mb-5">
+            <a href="https://stagemoodle.ucareer.org.au/" class="footer-logo-link">
+
+                {{#output.get_branding_context}}
+
+                    {{#logourl}}
+                        <img src="{{logourl}}"
+                             alt="{{sitename}}"
+                             class="footer-logo light-logo">
+                    {{/logourl}}
+
+                    {{#darklogourl}}
+                        <img src="{{darklogourl}}"
+                             alt="{{sitename}}"
+                             class="footer-logo dark-logo">
+                    {{/darklogourl}}
+
+                {{/output.get_branding_context}}
+
+            </a>
         </div>
 
-        <div class="custom-html {{^customhtml}}d-none{{/customhtml}}">
-            {{#hascontenthtml}}
-            <div class="contenthtml">
-                <h6 class="h-semibold-6 mb-0 ftr-column-title" >{{{title}}}</h6>
-                <hr class="d-sm-block d-md-none my-0">
-                <div class="section-html-content">
-                   <p class="p-0 m-0">
-                    {{{content}}}
-                   </p>
-                </div>
+        <div class="row">
+
+            <!-- Links -->
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <h4 class="footer-title">Link</h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="{{footerlink1url}}" target="_blank">
+                            Quality, Education and Course Provider Accreditation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{footerlink2url}}" target="_blank">
+                            Course Resources
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{footerlink3url}}" target="_blank">
+                            Australian Taxation Office (ATO)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{footerlink4url}}" target="_blank">
+                            Department of Employment and Workplace Relations
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{footerlink5url}}" target="_blank">
+                            Department of Industry, Innovation, Climate Change,
+                            Science, Research and Tertiary Education
+                        </a>
+                    </li>
+
+                    <li>
+                       <a href="{{footerlink6url}}" target="_blank">
+                            Queensland Government
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{footerlink7url}}" target="_blank">
+                            Wageline
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{footerlink8url}}" target="_blank">
+                            State Library of Queensland
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
-            {{/hascontenthtml}}
-            {{#hassocial}}
-            <div class="contentsocial social-links {{^socialiconvisibility}}d-none{{/socialiconvisibility}}">
-                {{#social}}
-                <a href="{{link}}" class="{{class}} text-decoration-none" title="{{title}}"><i class="{{icon}}"></i></a>
-                {{/social}}
+
+            <!-- Policies -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <h4 class="footer-title">Policies</h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="{{policybaseurl}}integrated-management-system-policy-statement/" target="_blank">
+                            Integrated Management System Policy Statement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{policybaseurl}}compliments-and-complaints-policy-statement/" target="_blank">
+                            Compliments and Complaints Policy Statement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{policybaseurl}}credit-and-debt-management-policy-statement/" target="_blank">
+                            Credit and Debt Management Policy Statement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{policybaseurl}}information-management-ip-copyright-privacy-policy-statement/" target="_blank">
+                            Information Management Policy Statement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{policybaseurl}}information-and-communication-technologies-website-security-terms-of-use-policy-statement/" target="_blank">
+                            Information and Communications Technology Policy Statement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{policybaseurl}}sales-exemptions-and-refunds-policy-statement/" target="_blank">
+                            Sales Exemptions & Refunds Policy Statement
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{policybaseurl}}website-terms-of-use/" target="_blank">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
-            {{/hassocial}}
+
+            <!-- Contact -->
+
+            <div class="col-lg-4">
+
+                <h4 class="footer-title">Contacts</h4>
+
+                <p class="footer-contact">
+
+                    Universal College of Australia<br>
+
+                    PO Box 326,<br>
+
+                    Upper Coomera, 4209, Queensland, Australia<br>
+
+                    T 13 68 22 |
+
+                    E
+                    <a href="mailto:contact@ucareer.org.au">
+                        contact@ucareer.org.au
+                    </a>
+
+                </p>
+
+                <a target="_blank" href="{{policybaseurl}}contact-us/"
+                    class="btn footer-contact-btn">
+                        Contact Us
+                        <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+
+            </div>
+
         </div>
+
     </div>
-    {{/sections}}
+
 </div>
-<hr class="d-block mb-0">

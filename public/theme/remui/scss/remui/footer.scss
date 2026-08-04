@@ -3860,6 +3860,249 @@ $sec-footer-screen : lg;
     }
  }
 }
+/* ======================================================
+   UCA Footer - Match WordPress Footer
+   ====================================================== */
+
+.uca-footer-main {
+    //background: #f3f7fb;
+    padding: 40px 0 30px;
+    color: #94A3B1;
+}
+
+/* Container width */
+.uca-footer-main .container,
+.uca-footer-bottom .container {
+    max-width: 1140px;
+}
+
+/* Logo */
+.uca-footer-logo {
+    margin-bottom: 40px;
+}
+
+.uca-footer-logo img {
+    width: 185px;
+    height: auto;
+}
+
+/* Row spacing */
+.uca-footer-main .row {
+    margin-top: 10px;
+}
+
+/* Footer headings */
+.footer-title {
+    margin-bottom: 24px;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 700;
+    color: #94A3B1;
+}
+
+/* Remove bullets */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+.footer-links li::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* Links */
+.footer-links a {
+    color: #94A3B1 !important;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.5;
+    transition: .25s;
+}
+
+.footer-links a:hover {
+    color: #005DAA !important;
+    text-decoration: none;
+}
+
+/* Contact */
+.footer-contact {
+    color: #94A3B1;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-contact div {
+    margin-bottom: 14px;
+}
+
+.footer-contact a {
+    color: #94A3B1 !important;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #005DAA !important;
+}
+footer#page-footer {
+    position:relative
+}
+/* Contact Button */
+.footer-contact-btn {
+    margin-top: 24px;
+    border: 2px solid #005DAA;
+    color: #005DAA !important;
+    border-radius: 999px;
+    padding: 13px 34px;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.footer-contact-btn:hover {
+    background: #005DAA;
+    color: #fff !important;
+}
+
+/* Secondary footer */
+.uca-footer-bottom {
+    //background: #f3f7fb;
+    padding: 8px 0 48px;
+    color: #94A3B1;
+}
+
+/* LinkedIn */
+.footer-social {
+    margin-top: 10px;
+    margin-bottom: 28px;
+}
+
+.footer-social a {
+    color: #005DAA;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #003d73;
+}
+
+/* Codes */
+.footer-codes {
+    font-size: 15px;
+    color: #94A3B1;
+    margin-bottom: 40px;
+}
+
+.footer-codes .separator {
+    margin: 0 10px;
+}
+
+/* Copyright */
+/* Full width copyright section */
+.uca-footer-copyright-section {
+    width: 100%;
+    background: #E4E9EE;
+    padding: 28px 0;
+    margin-top: 40px;
+}
+
+.uca-footer-copyright-section .container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    color: #94A3B1;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.footer-acknowledgement {
+    color: #94A3B1;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 980px;
+}
+.section-copyright{
+    background-color: #E4E9EE;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    bottom: -13%;
+}
+.copyright-all-group-cc {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 33px 12px;
+}
+
+#page-footer .footer-container {
+    padding-top: 55px !important;
+}
+
+/* Responsive */
+@media (max-width:991px){
+
+    .uca-footer-main{
+        padding:60px 0 0px;
+    }
+
+    .uca-footer-logo{
+        text-align:center;
+    }
+
+    .footer-title{
+        margin-top:25px;
+    }
+
+    .footer-social{
+        text-align:center;
+    }
+
+    .footer-codes,
+    .footer-copyright,
+    .footer-acknowledgement{
+        text-align:center;
+    }
+}
+
+@media all and (min-width:1400px) {
+    .copyright-all-group-cc {max-width:1140px !important; padding:33px 12px !important;}
+}
+
+@media all and (max-width:1399px) {
+    .copyright-all-group-cc { max-width:1120px !important; padding:33px 12px !important;}
+}
+
+
+@media all and (max-width:1199px) {
+    .copyright-all-group-cc {max-width:936px !important; padding:33px 12px !important;}
+}
+ 
+@media all and (max-width:992px) {
+    .copyright-all-group-cc {max-width:696px !important; padding:33px 12px !important;}
+}
+
+@media all and (max-width:767px) {
+    .section-copyright {bottom:-11%}
+}
+
+#page-footer a:focus,
+#page-footer a:not([class]):focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #ecf1f6 !important;
+    text-decoration: none !important;
+}
 #page-footer:has(.section-footer-design-5),
 #page-footer:has(.section-footer-design-6),
 #page-footer:has(.section-footer-design-7){

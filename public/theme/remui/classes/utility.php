@@ -638,6 +638,18 @@ class utility {
 
         $footer['top-area-header-text'] = strip_tags(format_text($customizer->get_config('top-area-header-text')));
 
+        // Policy Base URL.
+        $footer['policybaseurl'] = get_config('theme_remui', 'policybaseurl');
+        // Footer Links URLs.
+        $footer['footerlink1url'] = get_config('theme_remui', 'footerlink1url');
+        $footer['footerlink2url'] = get_config('theme_remui', 'footerlink2url');
+        $footer['footerlink3url'] = get_config('theme_remui', 'footerlink3url');
+        $footer['footerlink4url'] = get_config('theme_remui', 'footerlink4url');
+        $footer['footerlink5url'] = get_config('theme_remui', 'footerlink5url');
+        $footer['footerlink6url'] = get_config('theme_remui', 'footerlink6url');
+        $footer['footerlink7url'] = get_config('theme_remui', 'footerlink7url');
+        $footer['footerlink8url'] = get_config('theme_remui', 'footerlink8url');
+        
         return $footer;
     }
     /**

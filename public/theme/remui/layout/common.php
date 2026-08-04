@@ -116,7 +116,7 @@ if (isloggedin()) {
 }
 
 // Course Categories Menu.
-$primarymenu = \theme_remui\utility::get_coursecategory_menu($primarymenu);
+//$primarymenu = \theme_remui\utility::get_coursecategory_menu($primarymenu);
 
 // Login Menu Addition.
 if (!isloggedin() && \theme_remui\toolbox::get_setting('navlogin_popup')) {
@@ -182,6 +182,15 @@ if (isloggedin() && isset($primarymenu['edwisermenu'])) {
 }
 
 $templatecontext['sections'] = $templatecontext['footerdata']['sections'];
+$templatecontext['policybaseurl'] = get_config('theme_remui', 'policybaseurl');
+$templatecontext['footerlink1url'] = get_config('theme_remui', 'footerlink1url');
+$templatecontext['footerlink2url'] = get_config('theme_remui', 'footerlink2url');
+$templatecontext['footerlink3url'] = get_config('theme_remui', 'footerlink3url');
+$templatecontext['footerlink4url'] = get_config('theme_remui', 'footerlink4url');
+$templatecontext['footerlink5url'] = get_config('theme_remui', 'footerlink5url');
+$templatecontext['footerlink6url'] = get_config('theme_remui', 'footerlink6url');
+$templatecontext['footerlink7url'] = get_config('theme_remui', 'footerlink7url');
+$templatecontext['footerlink8url'] = get_config('theme_remui', 'footerlink8url');
 $templatecontext['focusdata'] = $focusdata;
 
 if (\theme_remui\toolbox::get_setting('enableannouncement') && !get_user_preferences('remui_dismised_announcement')) {

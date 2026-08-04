@@ -61,7 +61,54 @@
         ]
     }
 }}
-<nav class="navbar fixed-top navbar-expand {{navlayout}}  {{#homepagetransparentheader}}trasnparent-home-nav{{/homepagetransparentheader}}" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+<div class="uca-topbar">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-end align-items-center h-100">
+
+            <div class="me-4 custom-icon-cc-phonegroup">
+                <a href="tel:136822">
+                    <i class="fa fa-phone"></i>&nbsp;&nbsp;
+                    13 68 22
+                </a>
+            </div>
+
+            <div class="me-4">
+                <a href="mailto:contact@ucareer.org.au">
+                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;
+                    contact@ucareer.org.au
+                </a>
+            </div>
+
+            <div class="header-top-social-share">
+                <span class="header-top-facebook">
+                    <a href="" target="_blank" aria-label="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </span>
+
+                <span class="header-top-twitter">
+                    <a href="" target="_blank" aria-label="X" class="x-social">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932L18.9 1.153zm-1.29 19.49h2.04L6.486 3.24H4.297l13.314 17.404z"/>
+                        </svg>
+                    </a>
+                </span>
+
+                <span class="header-top-linkedin">
+                    <a href="" target="_blank" aria-label="LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<nav class="custom-nav-cc-group navbar fixed-top navbar-expand {{navlayout}}  {{#homepagetransparentheader}}trasnparent-home-nav{{/homepagetransparentheader}}" aria-label="{{#str}}sitemenubar, admin{{/str}}">
 
     <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-md-flex align-items-center m-0 aabtn" aria-label="{{ sitename }} - {{#str}}brandname, theme_remui{{/str}}" title="{{ sitename }}">
         {{#output.get_branding_context}}
@@ -247,5 +294,20 @@ require(['theme_remui/coursecategory_menu'], function(catMenu) {
     catMenu.init();
 });
 {{/js}}
+
+
+
+
+{{#js}}
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
+{{/js}}
+
+
 
 {{> theme_remui/primary-drawer-mobile }}

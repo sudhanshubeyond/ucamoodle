@@ -19,67 +19,62 @@
     @copyright (c) 2023 WisdmLabs (https://wisdmlabs.com/)
     @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 }}
-
 {{!
-    @template theme_remui/footer_secondary_sections
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License.
+
+    Edwiser RemUI
+    @package theme_remui
+}}
+{{!
+    UCA Custom Footer - Secondary
 }}
 
-{{#footerdata.footercopyrights}}
-    <div class="footer-copyright-wrapper " {{#attributes}} {{{.}}} {{/attributes}}>
-        <div class="{{^footerdata.footershowlogo}}d-none{{/footerdata.footershowlogo}} secondary-footer-logo">
-            <div class="navbar-logo-footer-wrapper {{^footerdata.useheaderlogo}}d-none{{/footerdata.useheaderlogo}}">
-                <a href="{{{ config.homeurl }}}"
-                class="navbar-brand d-flex  m-0 p-0 aabtn footer-logo"
-                aria-label="{{ sitename }} - {{#str}}brandname, theme_remui{{/str}}">
-                {{#output.get_branding_context}}
-                    {{#logourl}}
-                        <img src="{{ logourl }}" class="navbar-brand-logo logo light-logo">
-                    {{/logourl}}
+<div class="uca-footer-bottom">
 
-                    {{#darklogourl}}
-                        <img src="{{ darklogourl }}" class="navbar-brand-logo logo dark-logo">
-                    {{/darklogourl}}
+    <div class="container">
 
-                    {{#logominiurl}}
-                        <img src="{{ logominiurl }}" class="navbar-brand-logo logomini light-logomini">
-                    {{/logominiurl}}
+        <!-- Social -->
+        <div class="footer-social">
 
-                    {{#darklogominiurl}}
-                        <img src="{{ darklogominiurl }}" class="navbar-brand-logo logomini dark-logomini">
-                    {{/darklogominiurl}}
+            <a href="https://www.linkedin.com/company/universal-college-of-australia/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
 
-                    {{#icononly}}
-                        <span class="navbar-brand-logo icononly">
-                            <i class="fa fa-{{siteicon}}"></i>
-                        </span>
-                    {{/icononly}}
+                <i class="fa fa-linkedin-square"></i>
 
-                    {{#iconwithsitename}}
-                        <span class="navbar-brand-logo iconsitename">
-                            <i class="fa fa-{{siteicon}}"></i>&nbsp;
-                            {{{ sitename }}}
-                        </span>
-                    {{/iconwithsitename}}
-                {{/output.get_branding_context}}
             </a>
-            </div>
 
-            <div class="footer-diff-logo {{^footerdata.secondaryfooterlogo}}d-none{{/footerdata.secondaryfooterlogo}}">
-                <a href="{{{ config.homeurl }}}"
-                class="navbar-brand d-flex m-0 p-0 aabtn footer-logo"
-                aria-label="{{ sitename }} - {{#str}}brandname, theme_remui{{/str}}">
-                <img src="{{footerdata.secondaryfooterlogo}}" class="navbar-brand-logo logomini light-logo">
-                <img src="{{footerdata.secondaryfooterlogodarkmode}}" class="navbar-brand-logo logomini dark-logo">
-            </a>
-            </div>
         </div>
-        <div class="footer-content-debugging footer-dark">
-            <div class="footer-content-debugging-wrapper footer-dark-inner ">
-                {{> theme_remui/footer_legal}}
-            </div>
-        </div>
-        <div class="copyright-content secondary-footer-copyright {{^footercopyrightsshow}}d-none{{/footercopyrightsshow}}" {{#attributes}} {{{.}}} {{/attributes}}>
-            <p class=" mb-0 copyright-text">{{{content}}}</p>
-        </div>
+        <!-- Codes -->
+        <div class="footer-codes">
+
+        <a href="#">CRICOS Provider Code:</a> &nbsp;|&nbsp; 
+        <a href="#">Registered Training Organisation Code:</a> 
+        &nbsp;|&nbsp;&nbsp;<a href="#">Institute of Higher Education:</a>
+
+        </div>  
     </div>
-{{/footerdata.footercopyrights}}
+</div> 
+<!-- Copyright -->
+<div class="section-copyright">
+        <section class="copyright-all-group-cc">
+        <div class="footer-copyright">
+            © 2026 Universal College of Australia. All rights reserved.
+        </div>
+
+        <!-- Acknowledgement -->
+
+        <div class="footer-acknowledgement">
+
+            Universal College of Australia acknowledges and pays respect to the past,
+            present and future Traditional Custodians and Elders of this nation and
+            the continuation of cultural, spiritual and educational practices of
+            Aboriginal and Torres Strait Islander peoples.
+
+        </div>
+        </section>
+</div>
