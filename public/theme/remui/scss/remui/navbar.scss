@@ -733,7 +733,9 @@ body.scrolled .custom-nav-cc-group {margin-top:0 !important;}
         display: inline-block !important;
     }
 
-.dropdown-menu.dropdown-menu-start.show {min-height:220px !important}
+.dropdown-menu.dropdown-menu-start.show {
+    min-height:auto !important
+}
 
 }
 @media all and (max-width:767px) {
