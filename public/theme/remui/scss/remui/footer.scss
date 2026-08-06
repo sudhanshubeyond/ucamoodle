@@ -3980,8 +3980,9 @@ footer#page-footer {
 
 /* LinkedIn */
 .footer-social {
-    margin-top: 10px;
-    margin-bottom: 28px;
+    text-align: left !important;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .footer-social a , .footer-social a i {
@@ -3996,6 +3997,7 @@ footer#page-footer {
 
 /* Codes */
 .footer-codes {
+    text-align: left !important;
     font-size: 15px;
     color: #94A3B1;
     margin-bottom: 40px;
@@ -4057,7 +4059,7 @@ footer#page-footer {
     }
 
     .uca-footer-logo{
-        text-align:center;
+        text-align:left;
     }
 
     .footer-title{
@@ -4065,13 +4067,15 @@ footer#page-footer {
     }
 
     .footer-social{
-        text-align:center;
+        text-align:left;
+        margin-top: 18%;
+        margin-bottom: 3%;
     }
 
     .footer-codes,
     .footer-copyright,
     .footer-acknowledgement{
-        text-align:center;
+        text-align:left;
     }
 }
 
