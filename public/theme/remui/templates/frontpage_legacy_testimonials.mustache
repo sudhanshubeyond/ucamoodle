@@ -1,76 +1,478 @@
-{{!
-    This file is part of Moodle - http://moodle.org/
+<section class="uca-testimonials">
 
-    Moodle is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    <div class="uca-testimonials-container">
 
-    Moodle is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
+        <!-- Left side -->
+        <div class="uca-testimonials-heading">
 
-    Edwiser RemUI
-    @package theme_remui
-    @copyright (c) 2023 WisdmLabs (https://wisdmlabs.com/)
-    @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-
-}}
-{{!
-    @template theme_remui/frontpage_legacy_testimonials
-}}
-{{#testimoniallist}}
-<section id="edwiser-testimonials" role="main">
-    <div class="container r-py-16 {{aboutus_layout}}">
-        <div class="heading d-flex flex-column align-items-center p-py-14">
-            <h4 class="title h-semibold-3">{{{ aboutus_heading }}}</h4>
-            {{# aboutus_desc }}
-            <span class="desc para-regular-2">{{{ aboutus_desc }}}</span>
-            {{/ aboutus_desc }}
-        </div>
-        <div class="testimonials p-py-14">
-            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-bs-ride="carousel" data-bs-interval="4000">
-              <ol class="carousel-indicators">
-                {{# testimonials }}
-                    <li data-target="#testimonialCarousel" data-slide-to="{{count}}" data-bs-target="#testimonialCarousel" data-bs-slide-to="{{count}}" class="{{#active}}active{{/active}}"></li>
-                {{/ testimonials }}
-              </ol>
-              <div class="carousel-inner">
-                {{# testimonials }}
-                <div class="carousel-item {{#active}}active{{/active}}">
-                    <div class="carousel-item-wrapper d-flex flex-column flex-gap-6">
-                        <div >
-                            {{# image }}
-                            <span class="avatar current" style="background-image:url({{ image }});">
-                            </span>
-                            {{/ image }}
-                            {{# name }}
-                                <div class="font-size-20 text-dark">{{ name }}</div>
-                            {{/ name }}
-                            {{# designation }}
-                                <div class="font-size-14 text-muted">{{ designation }}</div>
-                            {{/ designation }}
-                        </div>
-                        {{# text }}
-                            <div class="font-size-14 text-muted text-center">
-                                {{{ text }}}
-                            </div>
-                        {{/ text }}
-                    </div>
-                </div>
-                {{/ testimonials }}
-              </div>
-              <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-target="#testimonialCarousel" data-bs-target="#testimonialCarousel" data-slide="prev" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon edw-icon edw-icon-Left-Arrow" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-target="#testimonialCarousel" data-bs-target="#testimonialCarousel" data-slide="next" data-bs-slide="next">
-                  <span class="carousel-control-next-icon edw-icon edw-icon-Right-Arrow" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-              </a>
+            <div class="uca-testimonials-label">
+                TESTIMONIALS
             </div>
+
+            <h2>
+                What Our Learner Have<br>
+                To Say
+            </h2>
+
+            <div class="uca-testimonials-underline"></div>
+
         </div>
-</div>
+
+
+        <!-- Right side -->
+        <div class="uca-testimonial-content">
+
+            <div class="uca-testimonial-slides">
+
+                <!-- TESTIMONIAL 1 -->
+                <div class="uca-testimonial-slide active">
+
+                    <div class="uca-testimonial-profile">
+
+                        <img
+                            src="{{config.wwwroot}}/theme/remui/pix/testimonial-01.png"
+                            alt="Learner"
+                            class="uca-testimonial-avatar">
+
+                    </div>
+
+                    <div class="uca-testimonial-text">
+
+                        <p>
+                            Learners were 100 percent satisfied with the program,
+                            which increased their self-confidence and competence in
+                            communication, interpersonal relationships, and job
+                            search techniques, especially job interviewing and
+                            canvassing in real situations.
+                        </p>
+
+                    </div>
+
+                    <div class="uca-testimonial-stars">
+                        ★★★★★
+                    </div>
+
+                    <div class="uca-testimonial-name">
+                        Service Manager
+                    </div>
+
+                    <div class="uca-testimonial-company">
+                        Mission Australia 2003
+                    </div>
+
+                </div>
+
+
+                <!-- TESTIMONIAL 2 -->
+                <div class="uca-testimonial-slide">
+
+                    <div class="uca-testimonial-profile">
+
+                        <img
+                            src="{{config.wwwroot}}/theme/remui/pix/testimonial-02.png"
+                            alt="Learner"
+                            class="uca-testimonial-avatar">
+
+                    </div>
+
+                    <div class="uca-testimonial-text">
+
+                        <p>
+                            The training was very useful and practical. The course
+                            helped me improve my skills and gave me greater confidence
+                            to apply what I learned in the workplace.
+                        </p>
+
+                    </div>
+
+                    <div class="uca-testimonial-stars">
+                        ★★★★★
+                    </div>
+
+                    <div class="uca-testimonial-name">
+                        Course Participant
+                    </div>
+
+                    <div class="uca-testimonial-company">
+                        Universal College of Australia
+                    </div>
+
+                </div>
+
+
+                <!-- TESTIMONIAL 3 -->
+                <div class="uca-testimonial-slide">
+
+                    <div class="uca-testimonial-profile">
+
+                        <img
+                            src="{{config.wwwroot}}/theme/remui/pix/testimonial-03.png"
+                            alt="Learner"
+                            class="uca-testimonial-avatar">
+
+                    </div>
+
+                    <div class="uca-testimonial-text">
+
+                        <p>
+                            I really enjoyed the learning experience. The trainers
+                            explained everything clearly and provided excellent
+                            support throughout the course. I would definitely
+                            recommend this course to other learners.
+                        </p>
+
+                    </div>
+
+                    <div class="uca-testimonial-stars">
+                        ★★★★★
+                    </div>
+
+                    <div class="uca-testimonial-name">
+                        Course Learner
+                    </div>
+
+                    <div class="uca-testimonial-company">
+                        UCA Student
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <div class="uca-testimonial-navigation">
+
+                <button
+                    type="button"
+                    class="uca-testimonial-arrow uca-testimonial-prev">
+                    ←
+                </button>
+
+                <button
+                    type="button"
+                    class="uca-testimonial-arrow uca-testimonial-next">
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
-{{/testimoniallist}}
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const section = document.querySelector('.uca-testimonials');
+
+    if (!section) {
+        return;
+    }
+
+    const slides = section.querySelectorAll(
+        '.uca-testimonial-slide'
+    );
+
+    const nextButton = section.querySelector(
+        '.uca-testimonial-next'
+    );
+
+    const prevButton = section.querySelector(
+        '.uca-testimonial-prev'
+    );
+
+    if (!slides.length) {
+        return;
+    }
+
+    let current = 0;
+    let isAnimating = false;
+
+    const autoSlideTime = 5000;
+    const transitionTime = 700;
+
+
+    /*
+     * Set initial positions
+     */
+
+    slides.forEach(function(slide, index) {
+
+        slide.style.transition = 'none';
+
+        if (index === 0) {
+
+            slide.classList.add('active');
+
+            slide.style.transform =
+                'translateX(0)';
+
+        } else {
+
+            slide.classList.remove('active');
+
+            slide.style.transform =
+                'translateX(100%)';
+
+        }
+
+    });
+
+
+    /*
+     * NEXT
+     *
+     * Current slide:
+     * LEFT
+     *
+     * Next slide:
+     * RIGHT -> CENTER
+     */
+
+    function nextSlide() {
+
+        if (isAnimating || slides.length < 2) {
+            return;
+        }
+
+        isAnimating = true;
+
+        const currentSlide = slides[current];
+
+        const nextIndex =
+            (current + 1) % slides.length;
+
+        const nextSlide =
+            slides[nextIndex];
+
+
+        /*
+         * Put next slide on RIGHT
+         */
+
+        nextSlide.style.transition = 'none';
+
+        nextSlide.style.transform =
+            'translateX(100%)';
+
+        nextSlide.classList.add('active');
+
+
+        /*
+         * Force browser repaint
+         */
+
+        nextSlide.offsetWidth;
+
+
+        /*
+         * Smooth movement
+         */
+
+        currentSlide.style.transition =
+            'transform 0.7s ease-in-out';
+
+        nextSlide.style.transition =
+            'transform 0.7s ease-in-out';
+
+
+        /*
+         * Current -> LEFT
+         */
+
+        currentSlide.style.transform =
+            'translateX(-100%)';
+
+
+        /*
+         * Next RIGHT -> CENTER
+         */
+
+        nextSlide.style.transform =
+            'translateX(0)';
+
+
+        setTimeout(function() {
+
+            currentSlide.classList.remove('active');
+
+            currentSlide.style.transition = 'none';
+
+            currentSlide.style.transform =
+                'translateX(100%)';
+
+            current = nextIndex;
+
+            isAnimating = false;
+
+        }, transitionTime);
+
+    }
+
+
+    /*
+     * PREVIOUS
+     *
+     * Current slide:
+     * RIGHT
+     *
+     * Previous slide:
+     * LEFT -> CENTER
+     */
+
+    function previousSlide() {
+
+        if (isAnimating || slides.length < 2) {
+            return;
+        }
+
+        isAnimating = true;
+
+        const currentSlide = slides[current];
+
+        const previousIndex =
+            (current - 1 + slides.length) %
+            slides.length;
+
+        const previousSlide =
+            slides[previousIndex];
+
+
+        /*
+         * Put previous slide on LEFT
+         */
+
+        previousSlide.style.transition = 'none';
+
+        previousSlide.style.transform =
+            'translateX(-100%)';
+
+        previousSlide.classList.add('active');
+
+
+        /*
+         * Force repaint
+         */
+
+        previousSlide.offsetWidth;
+
+
+        /*
+         * Smooth movement
+         */
+
+        currentSlide.style.transition =
+            'transform 0.7s ease-in-out';
+
+        previousSlide.style.transition =
+            'transform 0.7s ease-in-out';
+
+
+        /*
+         * Current -> RIGHT
+         */
+
+        currentSlide.style.transform =
+            'translateX(100%)';
+
+
+        /*
+         * Previous LEFT -> CENTER
+         */
+
+        previousSlide.style.transform =
+            'translateX(0)';
+
+
+        setTimeout(function() {
+
+            currentSlide.classList.remove('active');
+
+            currentSlide.style.transition = 'none';
+
+            currentSlide.style.transform =
+                'translateX(100%)';
+
+            current = previousIndex;
+
+            isAnimating = false;
+
+        }, transitionTime);
+
+    }
+
+
+    /*
+     * NEXT BUTTON
+     */
+
+    if (nextButton) {
+
+        nextButton.addEventListener(
+            'click',
+            function() {
+
+                nextSlide();
+
+                restartAutoSlide();
+
+            }
+        );
+
+    }
+
+
+    /*
+     * PREVIOUS BUTTON
+     */
+
+    if (prevButton) {
+
+        prevButton.addEventListener(
+            'click',
+            function() {
+
+                previousSlide();
+
+                restartAutoSlide();
+
+            }
+        );
+
+    }
+
+
+    /*
+     * AUTO SLIDE
+     */
+
+    let autoSlide = setInterval(
+        nextSlide,
+        autoSlideTime
+    );
+
+
+    /*
+     * Restart automatic slider
+     * after manual click
+     */
+
+    function restartAutoSlide() {
+
+        clearInterval(autoSlide);
+
+        autoSlide = setInterval(
+            nextSlide,
+            autoSlideTime
+        );
+
+    }
+
+});
+
+</script>

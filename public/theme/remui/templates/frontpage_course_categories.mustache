@@ -1,0 +1,60 @@
+<section class="uca-course-categories">
+
+    <div class="uca-course-categories-container">
+
+        <!-- Heading -->
+        <div class="uca-course-categories-heading">
+
+            <h2>Find a course</h2>
+
+            <div class="uca-course-categories-underline"></div>
+
+            <p>
+                Lorem Ipsum elit sed do eiusmod tempor incididunt ut labore et dolore
+            </p>
+
+        </div>
+
+
+        <!-- Dynamic Categories -->
+        <div class="uca-course-category-grid">
+
+            {{#coursecategories}}
+
+                <a href="{{url}}" class="uca-course-category-card">
+
+                    <div class="uca-course-category-icon category-icon-{{index}}">
+                        {{#icon}}
+                            <i class="fa {{icon}}"></i>
+                        {{/icon}}
+                    </div>
+
+                    <div class="uca-course-category-name">
+                        {{name}}
+                    </div>
+
+                </a>
+
+            {{/coursecategories}}
+
+        </div>
+
+
+        <!-- View More -->
+        {{#showcoursecategorybutton}}
+
+            <div class="uca-course-category-viewmore">
+
+                <a href="{{config.wwwroot}}/course/index.php">
+                    View More Courses
+                    <span>→</span>
+                </a>
+
+            </div>
+            
+
+        {{/showcoursecategorybutton}}
+
+    </div>
+
+</section>

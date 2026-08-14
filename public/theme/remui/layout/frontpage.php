@@ -62,7 +62,56 @@ if (\theme_remui\toolbox::get_setting('frontpagechooser') == 0) {
             'blogs' => array_values($recentblogs),
         ];
     }
-}
+
+     // Course categories for Find a Course section.
+    $categories = \core_course_category::get_all(
+        ['top' => true, 'visible' => true],
+        0,
+        0,
+        'id, name, sortorder'
+    );
+
+    $categorydata = [];
+    $categoryindex = 0;
+
+    foreach ($categories as $category) {
+
+        // Only show categories that have courses.
+        if ($category->get_courses_count() == 0) {
+            continue;
+        }
+
+       $icons = [
+            'fa-paw',
+            'fa-leaf',
+            'fa-car',
+            'fa-usd',
+            'fa-heartbeat',
+            'fa-building',
+            'fa-paint-brush',
+            'fa-cutlery',
+            'fa-graduation-cap'
+        ];
+
+        $categorydata[] = [
+            'name' => $category->get_formatted_name(),
+            'url' => $category->get_view_link(),
+            'index' => $categoryindex,
+            'icon' => $icons[$categoryindex] ?? 'fa-folder',
+        ];
+
+        $categoryindex++;
+
+        // Show maximum 9 categories.
+        if ($categoryindex >= 9) {
+            break;
+        }
+    }
+
+    $templatecontext['coursecategories'] = $categorydata;
+    $templatecontext['showcoursecategorybutton'] = true;
+
+}   
 
 $frontpagechooser = \theme_remui\toolbox::get_setting('frontpagechooser');
 $isoldfrontpage = ($frontpagechooser == 0);

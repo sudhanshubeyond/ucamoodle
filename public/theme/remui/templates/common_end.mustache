@@ -57,8 +57,15 @@
     </section>
     {{/canaddfullwidthbottomblocks}}
     </div>
+    {{#pagelayout_frontpage}}
+    {{> theme_remui/frontpage_legacy_testimonials}}
+        {{> theme_remui/frontpage_enquiries}}
+    {{/pagelayout_frontpage}}
+
     {{> theme_remui/footer }}
+
     {{{ output.standard_after_main_region_html }}}
+</div>
 </div>
 
 {{#edw_quick_menu}}
