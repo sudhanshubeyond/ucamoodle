@@ -833,7 +833,9 @@ body.pagelayout-frontpage {
 /* =========================================================
    CATEGORY ICON
    ========================================================= */
-
+body.pagelayout-frontpage #page.drawers .main-inner .frontpage-sections{
+    max-width: 100% !important;
+}
 .uca-course-category-icon {
     width: 60px;
     height: 60px;
