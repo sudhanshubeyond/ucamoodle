@@ -214,6 +214,277 @@ body.pagelayout-frontpage {
     }
 }
 /* =========================================================
+   UCA Banner SECTION
+   ========================================================= */
+@keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-section-banner--cc {
+            background-image: url('/theme/remui/pix/main-bg.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: #120b4e;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+            color: #ffffff;
+        }
+
+        .hero-text-wrapper-banner--cc {
+
+            animation: fadeInLeft 1s ease-out forwards;
+            position: relative;
+            z-index: 2;
+            padding-bottom: 80px;
+        }
+
+        .hero-title-banner--cc {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .highlight-text-banner--cc {
+            color: #00bce4;
+        }
+        .text-banner--cc {
+            color: #fff;
+        }
+
+        .hero-subtitle-banner--cc {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 90%;
+            opacity: 0.9;
+        }
+
+        .btn-apply-banner--cc {
+            background-color: #ffffff;
+            color: #120b4e;
+            border-radius: 50px;
+            padding: 12px 35px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+
+        .btn-apply-banner--cc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(to right, #1d3fb5, #00e5ff);
+            z-index: -1;
+            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            transform-origin: right;
+            transform: scaleX(0);
+        }
+
+        .btn-apply-banner--cc:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .btn-apply-banner--cc:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .btn-apply-banner--cc i {
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image-banner--cc-wrapper-banner--cc {
+
+            animation: fadeInRight 1s ease-out forwards;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+        }
+
+        .hero-image-banner--cc {
+            max-width: 90%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
+
+        .shape-dots-banner--cc {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.4;
+            max-width: 150px;
+        }
+
+        .shape-dots-banner--cc.left-banner--cc {
+            top: -20px;
+            left: -50px;
+        }
+
+        .cyan-circle-banner--cc {
+            width: 35px;
+            height: 35px;
+            background-color: #00e5ff;
+            border-radius: 50%;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            z-index: 3;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+        }
+
+        .feature-bar-banner--cc {
+            background-color: transparent;
+            background-image: linear-gradient(-90deg, #004B8D 0%, #141F52 100%);
+            position: relative;
+            z-index: 3;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-item-banner--cc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 20px;
+            color: #ffffff;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .feature-item-banner--cc:last-child {
+            border-right: none;
+        }
+
+        .feature-item-banner--cc:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-icon-box-banner--cc {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.3rem;
+        }
+
+        .feature-text-banner--cc {
+            font-weight: 600;
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+
+        .custom-size-features-group {
+            max-width: 1160px !important
+        }
+
+        @media (max-width: 991px) {
+            .hero-title-banner--cc {
+                font-size: 2.8rem;
+            }
+
+            .hero-text-wrapper-banner--cc {
+                text-align: center;
+                padding-bottom: 40px;
+            }
+
+            .hero-subtitle-banner--cc {
+                margin: 0 auto 30px auto;
+            }
+
+            .shape-dots-banner--cc.left-banner--cc {
+                left: 0;
+            }
+
+            .feature-item-banner--cc {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                justify-content: flex-start;
+                padding: 25px 30px;
+            }
+
+            .feature-item-banner--cc:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero-title-banner--cc {
+                font-size: 2.2rem;
+            }
+
+            .hero-section-banner--cc {
+                padding-top: 60px;
+            }
+
+            .hero-subtitle-banner--cc {
+                font-size: 1rem;
+            }
+
+            .btn-apply-banner--cc {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+
+            .cyan-circle-banner--cc {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .shape-dots-banner--cc.left-banner--cc,
+        .cyan-circle-banner--cc {
+            transition: transform 0.15s ease-out;
+            will-change: transform;
+        }
+
+
+/* =========================================================
    UCA ENQUIRIES SECTION
    ========================================================= */
 
@@ -326,7 +597,7 @@ body.pagelayout-frontpage {
 
 .uca-enquiries-description {
     max-width: 1050px;
-    margin: 30px 0px 0px 50px;
+    margin: 30px 0px 0px 10px;
     color: #ffffff;
     font-size: 16px;
     line-height: 1.6;
