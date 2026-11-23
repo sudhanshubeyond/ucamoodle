@@ -2293,6 +2293,11 @@ class utility {
         $coursehandler = new \theme_remui_coursehandler();
         $categoryids = $coursehandler->get_allowed_categories($categoryid);
 
+        if (empty($categoryids)) {
+            // No categories are visible/allowed, so there can be no visible courses.
+            return [];
+        }
+
         $systemcontext = context_system::instance();
         $canviewhiddencourses = has_capability('moodle/course:viewhiddencourses', $systemcontext);
 
